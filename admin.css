@@ -1,0 +1,204 @@
+/* General Admin Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Admin Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Admin Navbar Styling */
+.admin-navbar {
+    background-color: #333;
+    padding: 20px;
+    width: 180px; /* Reduced width for a smaller sidebar */
+    height: 100vh; /* Full height */
+    position: fixed; /* Fix it to the side */
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.admin-navbar .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+/* Navigation Styling */
+.admin-navbar nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-navbar nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+    border-radius: 4px;
+    display: inline-block; /* Makes hover effect only affect the text */
+}
+
+.admin-navbar nav a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+    color: white; /* Ensures text stays white */
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-left: 200px; /* Adjusted to reflect smaller navbar width */
+    width: calc(100% - 200px); /* Ensure it takes the full width minus navbar width */
+}
+
+/* Section Styling */
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 200px; /* Adjusted to reflect smaller navbar width */
+    flex-grow: 1;
+}
+
+/* Product Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f0f0f0;
+}
+
+table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Product Image Display in Listing */
+.product-image {
+    width: 60px; /* Set to a fixed size */
+    height: 60px; /* Set to a fixed size */
+    object-fit: cover;
+    border-radius: 5px; /* Optional: rounded corners for images */
+}
+
+/* Admin Product Edit Image Preview */
+.product-image-preview img {
+    width: 120px; /* Larger image for preview */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Product Edit Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Button Styling */
+button.submit-btn {
+    background-color: #0000e2;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.submit-btn:hover {
+    background-color: #1ae4d7;
+}
+
+/* Search Input Styling */
+#search {
+    padding: 10px;
+    width: 30%;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Instructions and Example File Styling */
+.instructions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.instructions ul li {
+    margin-bottom: 10px;
+}
+
+.example-file pre {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: pre-wrap;
+}
+
+

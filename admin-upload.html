@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Bulk Upload</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <header>
+        <div class="admin-navbar">
+            <nav>
+                <a href="admin-products.html" class="logo">Tales & Tomes Admin</a>
+                <a href="admin-upload.html">Bulk Upload</a>
+                <a href="admin-products.html">Product Listing</a>
+                <a href="logout.html">Sign Out</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="admin-upload">
+        <div class="container">
+            <h1>Admin Bulk Upload</h1>
+            <p>Upload a file containing bulk product data. The file should be in one of the following formats: JSON,
+                CSV, or TXT.</p>
+
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <div class="upload-field">
+                    <label for="file-upload">Choose a file to upload:</label>
+                    <input type="file" id="file-upload" name="file" accept=".json, .csv, .txt" required>
+                </div>
+
+                <div class="instructions">
+                    <h3>Accepted File Formats</h3>
+                    <ul>
+                        <li><strong>JSON:</strong> A file in JSON format containing product data.</li>
+                        <li><strong>CSV:</strong> A CSV file with product details in columns.</li>
+                        <li><strong>TXT:</strong> A text file containing product data in plain text format.</li>
+                    </ul>
+                </div>
+
+                <div class="example-file">
+                    <h3>Example File Format</h3>
+                    <p><strong>JSON Example:</strong></p>
+                    <pre>
+{
+    "products": [
+        {
+            "name": "Mystery Novel",
+            "price": "$19.99",
+            "category": "Mystery",
+            "image": "images/Mystery.jpg",
+            "description": "A thrilling mystery novel."
+        },
+        {
+            "name": "Sci-Fi Adventure",
+            "price": "$24.99",
+            "category": "Sci-Fi",
+            "image": "images/Sci-fi.jpg",
+            "description": "An exciting Sci-Fi adventure."
+        }
+    ]
+}
+                    </pre>
+
+                    <p><strong>CSV Example:</strong></p>
+                    <pre>
+Name, Price, Category, Image, Description
+Mystery Novel, $19.99, Mystery, images/Mystery.jpg, A thrilling mystery novel.
+Sci-Fi Adventure, $24.99, Sci-Fi, images/Sci-fi.jpg, An exciting Sci-Fi adventure.
+                    </pre>
+
+                    <p><strong>TXT Example:</strong></p>
+                    <pre>
+Mystery Novel|$19.99|Mystery|images/Mystery.jpg|A thrilling mystery novel.
+Sci-Fi Adventure|$24.99|Sci-Fi|images/Sci-fi.jpg|An exciting Sci-Fi adventure.
+                    </pre>
+                </div>
+
+                <button type="submit" class="submit-btn">Upload File</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tales and Tomes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

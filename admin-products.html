@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Product Listing</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <!-- Admin Navigation -->
+    <header>
+        <div class="admin-navbar">
+            <nav>
+                <a href="#" class="logo">Tales & Tomes Admin</a>
+                <a href="admin-upload.html">Bulk Upload</a>
+                <a href="admin-products.html">Product Listing</a>
+                <a href="logout.html">Sign Out</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Admin Product Listing Section -->
+    <section class="product-listing">
+        <div class="container">
+            <h1>Admin Product Listing</h1>
+
+
+            <!-- Search/Filter Products -->
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search products..." onkeyup="filterProducts()">
+            </div>
+
+            <!-- Product Table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Image</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="product-list">
+                    <!-- Example product row -->
+                    <tr>
+                        <td>12345</td>
+                        <td>The Silent Patient</td>
+                        <td>A psychological thriller that will keep you on edge.</td>
+                        <td>Mystery</td>
+                        <td><img src="images/Mystery.jpg" alt="Mystery Novel" class="product-image" /></td>
+                        <td>$19.99</td>
+                        <td>
+                            <!-- Admin Actions: Edit, Delete, Archive -->
+                            <a href="product-edit.html?product_id=12345" class="edit-btn">Edit</a>
+                            <a href="delete-product.html?product_id=12345" class="delete-btn">Delete</a>
+                            <a href="archive-product.html?product_id=12345" class="archive-btn">Archive</a>
+                        </td>
+                    </tr>
+                    <!-- More product rows would go here -->
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tales and Tomes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
