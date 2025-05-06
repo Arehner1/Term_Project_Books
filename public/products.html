@@ -8,7 +8,6 @@
 </head>
 
 <body>
-
     <!-- Navbar -->
     <header>
         <div class="navbar">
@@ -46,42 +45,10 @@
                 </select>
             </div>
 
-            <!-- Product Grid -->
-            <article class="product-grid">
-                <section class="product-item">
-                    <img src="/images/Mystery.jpg" alt="Mystery Novel">
-                    <h2 class="product-name">Mystery Novel</h2>
-                    <p class="product-price">$19.99</p>
-                    <a href="details.html?product_id=1" class="view-details">View Details</a>
-                    <button class="add-to-cart-btn" data-id="1">Add to Cart</button>
-                </section>
+            <!-- Product Grid (rendered by JS) -->
+            <article class="product-grid"></article>
 
-                <section class="product-item">
-                    <img src="/images/Sci-fi.jpg" alt="Sci-Fi Adventure">
-                    <h2 class="product-name">Sci-Fi Adventure</h2>
-                    <p class="product-price">$24.99</p>
-                    <a href="details.html?product_id=2" class="view-details">View Details</a>
-                    <button class="add-to-cart-btn" data-id="2">Add to Cart</button>
-                </section>
-
-                <section class="product-item">
-                    <img src="/images/Historical fiction.jpg" alt="Historical Fiction">
-                    <h2 class="product-name">Historical Fiction</h2>
-                    <p class="product-price">$14.99</p>
-                    <a href="details.html?product_id=3" class="view-details">View Details</a>
-                    <button class="add-to-cart-btn" data-id="3">Add to Cart</button>
-                </section>
-
-                <section class="product-item">
-                    <img src="/images/fantasy saga.jpg" alt="Fantasy Saga">
-                    <h2 class="product-name">Fantasy Saga</h2>
-                    <p class="product-price">$29.99</p>
-                    <a href="details.html?product_id=4" class="view-details">View Details</a>
-                    <button class="add-to-cart-btn" data-id="4">Add to Cart</button>
-                </section>
-            </article>
-
-            <!-- Pagination -->
+            <!-- Optional Pagination UI -->
             <nav class="pagination">
                 <a href="#">Previous</a>
                 <a href="#">1</a>
@@ -99,6 +66,5 @@
 
     <!-- JavaScript -->
     <script src="js/products.js"></script>
-
 </body>
 </html>
