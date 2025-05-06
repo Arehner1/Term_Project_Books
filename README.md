@@ -1,8 +1,10 @@
 1. Clone Repo
 2. Install Dependencies
-3. Start server
-4. Vist at http://localhost:3000
-5. Before running SQL retrieve stubbed data for cart/admin
-6. Run SQL to retrieve all products from DB
+3. Before starting server run sql commandes for
+   - create_tables.sql
+   - insert_categories.sql
+   - insert_products.sql
+4. Run node server.js
+5. Vist at http://localhost:3000
 
-This project uses stubbed data and an in-memory SQLite database.
+
