@@ -1,14 +1,14 @@
 {
   "products": [
     {
-      "name": "Fictional Tale",
+      "name": "Fourth Wing",
       "description": "A beautifully written fictional novel.",
       "category": "Fiction",
       "price": "$15.99",
       "image": "images/Fiction.jpg"
     },
     {
-      "name": "True Story",
+      "name": "Atomic Habits",
       "description": "A compelling real-life story.",
       "category": "Non-fiction",
       "price": "$18.49",
