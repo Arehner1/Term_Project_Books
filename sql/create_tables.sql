@@ -27,7 +27,7 @@ CREATE TABLE products (
 CREATE TABLE carts (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     status VARCHAR(20) NOT NULL CHECK (status IN ('new', 'abandoned', 'purchased')),
-    user_id INTEGER NOT NULL UNIQUE,
+    user_id INTEGER NOT NULL,
     created_at DATE NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id)
 );

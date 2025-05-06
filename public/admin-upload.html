@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Bulk Upload</title>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="admin.css" />
 </head>
 
 <body>
+    <!-- Admin Navigation -->
     <header>
         <div class="admin-navbar">
             <nav>
@@ -21,67 +22,46 @@
         </div>
     </header>
 
+    <!-- Upload Section -->
     <section class="admin-upload">
         <div class="container">
             <h1>Admin Bulk Upload</h1>
-            <p>Upload a file containing bulk product data. The file should be in one of the following formats: JSON,
-                CSV, or TXT.</p>
+            <p>Upload a <strong>JSON file</strong> containing product data.</p>
 
-            <form action="/upload" method="POST" enctype="multipart/form-data">
+            <form id="upload-form">
                 <div class="upload-field">
-                    <label for="file-upload">Choose a file to upload:</label>
-                    <input type="file" id="file-upload" name="file" accept=".json, .csv, .txt" required>
-                </div>
-
-                <div class="instructions">
-                    <h3>Accepted File Formats</h3>
-                    <ul>
-                        <li><strong>JSON:</strong> A file in JSON format containing product data.</li>
-                        <li><strong>CSV:</strong> A CSV file with product details in columns.</li>
-                        <li><strong>TXT:</strong> A text file containing product data in plain text format.</li>
-                    </ul>
-                </div>
-
-                <div class="example-file">
-                    <h3>Example File Format</h3>
-                    <p><strong>JSON Example:</strong></p>
-                    <pre>
-{
-    "products": [
-        {
-            "name": "Mystery Novel",
-            "price": "$19.99",
-            "category": "Mystery",
-            "image": "images/Mystery.jpg",
-            "description": "A thrilling mystery novel."
-        },
-        {
-            "name": "Sci-Fi Adventure",
-            "price": "$24.99",
-            "category": "Sci-Fi",
-            "image": "images/Sci-fi.jpg",
-            "description": "An exciting Sci-Fi adventure."
-        }
-    ]
-}
-                    </pre>
-
-                    <p><strong>CSV Example:</strong></p>
-                    <pre>
-Name, Price, Category, Image, Description
-Mystery Novel, $19.99, Mystery, images/Mystery.jpg, A thrilling mystery novel.
-Sci-Fi Adventure, $24.99, Sci-Fi, images/Sci-fi.jpg, An exciting Sci-Fi adventure.
-                    </pre>
-
-                    <p><strong>TXT Example:</strong></p>
-                    <pre>
-Mystery Novel|$19.99|Mystery|images/Mystery.jpg|A thrilling mystery novel.
-Sci-Fi Adventure|$24.99|Sci-Fi|images/Sci-fi.jpg|An exciting Sci-Fi adventure.
-                    </pre>
+                    <label for="json-file">Choose a JSON file to upload:</label>
+                    <input type="file" id="json-file" name="file" accept=".json" required />
                 </div>
 
                 <button type="submit" class="submit-btn">Upload File</button>
             </form>
+
+            <div class="instructions">
+                <h3>JSON Format Instructions</h3>
+                <p><strong>Required Fields per Product:</strong> <code>name</code>, <code>price</code> (as number or string with $), <code>category_id</code>, <code>image_url</code>, and <code>description</code></p>
+
+                <pre>
+{
+  "products": [
+    {
+      "name": "Mystery Novel",
+      "description": "A thrilling mystery novel.",
+      "category_id": 3,
+      "price": "$19.99",
+      "image_url": "images/Mystery.jpg"
+    },
+    {
+      "name": "Sci-Fi Adventure",
+      "description": "An exciting Sci-Fi adventure.",
+      "category_id": 4,
+      "price": "$24.99",
+      "image_url": "images/Sci-fi.jpg"
+    }
+  ]
+}
+                </pre>
+            </div>
         </div>
     </section>
 
@@ -91,6 +71,7 @@ Sci-Fi Adventure|$24.99|Sci-Fi|images/Sci-fi.jpg|An exciting Sci-Fi adventure.
         </div>
     </footer>
 
+    <script src="js/admin-upload.js"></script>
 </body>
 
 </html>

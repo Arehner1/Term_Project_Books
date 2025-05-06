@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <title>Product Listing - SecretVault</title>
+    <title>Product Listing - Tales and Tomes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Navbar -->
     <header>
         <div class="navbar">
             <nav>
@@ -23,62 +22,67 @@
         </div>
     </header>
 
+    <!-- Product Listing -->
     <section class="product-listing">
         <div class="container">
             <h1>Featured Products</h1>
-    
-           
+
+            <!-- Controls -->
             <div class="controls">
                 <label for="sort-by">Sort by:</label>
                 <select id="sort-by">
                     <option value="name">Name</option>
                     <option value="price">Price</option>
                 </select>
-                
+
                 <label for="category">Filter by Category:</label>
                 <select id="category">
                     <option value="all">All Categories</option>
-                    <option value="fiction">Fiction</option>
-                    <option value="non-fiction">Non-fiction</option>
-                    <option value="mystery">Mystery</option>
-                    <option value="sci-fi">Sci-Fi</option>
-                    <option value="fantasy">Fantasy</option>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Non-fiction">Non-fiction</option>
+                    <option value="Mystery">Mystery</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Historical Fiction">Historical Fiction</option>
                 </select>
             </div>
-    
+
             <!-- Product Grid -->
             <article class="product-grid">
                 <section class="product-item">
-                    <img src="images/Mystery.jpg" alt="Product 1">
+                    <img src="/images/Mystery.jpg" alt="Mystery Novel">
                     <h2 class="product-name">Mystery Novel</h2>
                     <p class="product-price">$19.99</p>
-                    <a href="details.html" class="view-details">View Details</a>
+                    <a href="details.html?product_id=1" class="view-details">View Details</a>
+                    <button class="add-to-cart-btn" data-id="1">Add to Cart</button>
                 </section>
-    
+
                 <section class="product-item">
-                    <img src="images/Sci-fi.jpg" alt="Product 2">
+                    <img src="/images/Sci-fi.jpg" alt="Sci-Fi Adventure">
                     <h2 class="product-name">Sci-Fi Adventure</h2>
                     <p class="product-price">$24.99</p>
-                    <a href="#" class="view-details">View Details</a>
+                    <a href="details.html?product_id=2" class="view-details">View Details</a>
+                    <button class="add-to-cart-btn" data-id="2">Add to Cart</button>
                 </section>
-    
+
                 <section class="product-item">
-                    <img src="images/Historical fiction.jpg" alt="Product 3">
+                    <img src="/images/Historical fiction.jpg" alt="Historical Fiction">
                     <h2 class="product-name">Historical Fiction</h2>
                     <p class="product-price">$14.99</p>
-                    <a href="#" class="view-details">View Details</a>
+                    <a href="details.html?product_id=3" class="view-details">View Details</a>
+                    <button class="add-to-cart-btn" data-id="3">Add to Cart</button>
                 </section>
-    
+
                 <section class="product-item">
-                    <img src="images/fantasy saga.jpg" alt="Product 4">
+                    <img src="/images/fantasy saga.jpg" alt="Fantasy Saga">
                     <h2 class="product-name">Fantasy Saga</h2>
                     <p class="product-price">$29.99</p>
-                    <a href="#" class="view-details">View Details</a>
+                    <a href="details.html?product_id=4" class="view-details">View Details</a>
+                    <button class="add-to-cart-btn" data-id="4">Add to Cart</button>
                 </section>
-                <!-- Add more products as needed -->
             </article>
-    
-            <!-- Pagination Controls -->
+
+            <!-- Pagination -->
             <nav class="pagination">
                 <a href="#">Previous</a>
                 <a href="#">1</a>
@@ -88,16 +92,14 @@
             </nav>
         </div>
     </section>
-    
 
+    <!-- Footer -->
     <footer>
         <p>© 2025 Tales and Tomes. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="js/products.js"></script>
+
 </body>
-
 </html>
-
-
-</body>
-</html>
-

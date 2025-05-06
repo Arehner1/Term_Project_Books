@@ -271,3 +271,22 @@ footer a {
     gap: 30px;
     flex-wrap: wrap;
 }
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    padding: 10px 20px;
+    background-color: #e74c3c; 
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #c0392b;
+}
+

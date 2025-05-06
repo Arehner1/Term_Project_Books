@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit Product</title>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="admin.css" />
 </head>
 <body>
 
@@ -12,9 +12,8 @@
     <header>
         <div class="admin-navbar">
             <nav>
-                
-                <a href="" class="logo">Tales & Tomes Admin</a>
-                <a href="index.html">Home</a>
+                <a href="#" class="logo">Tales & Tomes Admin</a>
+                <a href="index.html">Home</a> 
                 <a href="admin-upload.html">Bulk Upload</a>
                 <a href="admin-products.html">Product Listing</a>
                 <a href="logout.html">Sign Out</a>
@@ -27,41 +26,48 @@
         <div class="container">
             <h1>Edit Product</h1>
 
-            <form action="/save-product" method="POST">
+            <form id="edit-product-form">
+
                 <div class="form-group">
                     <label for="product-id">Product ID (Non-editable):</label>
-                    <input type="text" id="product-id" name="product_id" value="12345" disabled />
+                    <input type="text" id="product-id" name="product_id" disabled />
                 </div>
                 
                 <div class="form-group">
                     <label for="product-name">Name:</label>
-                    <input type="text" id="product-name" name="name" value="The Silent Patient" />
+                    <input type="text" id="product-name" name="name" />
                 </div>
 
                 <div class="form-group">
                     <label for="product-description">Description:</label>
-                    <textarea id="product-description" name="description">A thrilling mystery novel.</textarea>
+                    <textarea id="product-description" name="description"></textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="product-category">Category:</label>
-                    <input type="text" id="product-category" name="category" value="Mystery" />
+                    <select id="product-category" name="category">
+                        <option value="">-- Select a Category --</option>
+                        <option value="1">Fiction</option>
+                        <option value="2">Non-fiction</option>
+                        <option value="3">Mystery</option>
+                        <option value="4">Sci-Fi</option>
+                        <option value="5">Fantasy</option>
+                        <option value="6">Historical Fiction</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="product-image">Current Image:</label>
-                    <div class="product-image-preview">
-                        <img src="images/Mystery.jpg" alt="Mystery Novel" />
-                    </div>
-                    <input type="text" id="product-image" name="image" value="images/Mystery.jpg" disabled />
+                    <label for="product-image">Image URL:</label>
+                    <input type="text" id="product-image" name="image" />
                 </div>
 
                 <div class="form-group">
                     <label for="product-price">Price:</label>
-                    <input type="text" id="product-price" name="price" value="$19.99" />
+                    <input type="text" id="product-price" name="price" />
                 </div>
 
-                <button type="submit" class="submit-btn">Save Changes</button>
+                <button type="submit" class="submit-btn" id="save-btn">Save Changes</button>
+                <button type="button" class="submit-btn" id="create-btn">Create New Item</button>
             </form>
         </div>
     </section>
@@ -73,5 +79,6 @@
         </div>
     </footer>
 
+    <script src="js/product-edit.js"></script>
 </body>
 </html>

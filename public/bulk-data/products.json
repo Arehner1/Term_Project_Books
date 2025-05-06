@@ -1,0 +1,18 @@
+{
+  "products": [
+    {
+      "name": "Fictional Tale",
+      "description": "A beautifully written fictional novel.",
+      "category": "Fiction",
+      "price": "$15.99",
+      "image": "images/Fiction.jpg"
+    },
+    {
+      "name": "True Story",
+      "description": "A compelling real-life story.",
+      "category": "Non-fiction",
+      "price": "$18.49",
+      "image": "images/Non-fiction.jpg"
+    }
+  ]
+}
